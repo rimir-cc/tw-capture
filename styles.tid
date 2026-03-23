@@ -1,0 +1,38 @@
+created: 20260323120000000
+modified: 20260323120000000
+tags: $:/tags/Stylesheet
+title: $:/plugins/rimir/capture/styles
+type: text/vnd.tiddlywiki
+
+.cap-triage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cap-triage-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border: 1px solid <<colour tiddler-border>>;
+    border-radius: 6px;
+    background: <<colour tiddler-background>>;
+}
+
+.cap-triage-text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cap-triage-meta {
+    flex-shrink: 0;
+}
+
+.cap-triage-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}

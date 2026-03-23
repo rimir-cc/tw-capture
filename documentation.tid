@@ -1,0 +1,14 @@
+created: 20260323120000000
+modified: 20260323120000000
+title: $:/plugins/rimir/capture/documentation
+type: text/vnd.tiddlywiki
+
+<%if [[$:/plugins/rimir/doc-template]has[plugin-type]] %>
+<$tiddler tiddler="$:/plugins/rimir/capture/doc/overview">
+<$transclude $tiddler="$:/plugins/rimir/capture/doc/overview"/>
+</$tiddler>
+<%else%>
+To display this documentation, the plugin [[$:/plugins/rimir/doc-template]] needs to be installed.
+
+See the [[readme|$:/plugins/rimir/capture/readme]] tab for a basic overview.
+<%endif%>

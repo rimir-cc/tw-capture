@@ -1,0 +1,14 @@
+created: 20260323120000000
+modified: 20260323120000000
+title: $:/plugins/rimir/capture/icon
+type: image/svg+xml
+
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="8" width="40" height="48" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+  <line x1="22" y1="22" x2="42" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="22" y1="30" x2="42" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="22" y1="38" x2="36" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="44" cy="46" r="10" fill="currentColor" opacity="0.15"/>
+  <line x1="40" y1="46" x2="48" y2="46" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="44" y1="42" x2="44" y2="50" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

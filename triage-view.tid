@@ -1,0 +1,51 @@
+created: 20260323120000000
+modified: 20260323120000000
+tags: $:/tags/rimir/appify/view
+title: $:/plugins/rimir/capture/triage-view
+type: text/vnd.tiddlywiki
+
+\procedure cap-promote-actions()
+<$action-setfield $tiddler="$:/state/rimir/typed/spawner/prefill-text" text={{{ [<currentTiddler>get[text]] }}}/>
+<$action-navigate $to="$:/plugins/rimir/typed/spawner"/>
+\end
+
+<$let inboxTitle={{{ [{$:/config/rimir/capture/inbox-stream}] ~[[Inbox]] }}}>
+
+!! Triage inbox
+
+<$let nodes={{{ [<inboxTitle>get[stream-list]enlist-input[]] }}}>
+
+<%if [<nodes>!is[blank]] %>
+
+<div class="cap-triage-list">
+<$list filter="[<inboxTitle>get[stream-list]enlist-input[]]" variable="node">
+<div class="cap-triage-item">
+<div class="cap-triage-text">
+<$text text={{{ [<node>get[text]splitregexp[\n]first[]] }}}/>
+</div>
+<div class="cap-triage-meta">
+<span class="rr-muted rr-small"><$view tiddler=<<node>> field="created" format="date" template="YYYY-0MM-0DD 0hh:0mm"/></span>
+</div>
+<div class="cap-triage-actions">
+<$button class="rr-link-btn" tooltip="Open typed spawner with this text">
+<$action-setfield $tiddler="$:/state/rimir/typed/spawner/prefill-text" text={{{ [<node>get[text]] }}}/>
+<$action-navigate $to="$:/plugins/rimir/typed/spawner"/>
+promote
+</$button>
+<$button class="rr-link-btn" tooltip="Open in story river">
+<$action-navigate $to=<<node>>/>
+open
+</$button>
+</div>
+</div>
+</$list>
+</div>
+
+<%else%>
+
+<div class="rr-muted">Inbox is empty.</div>
+
+<%endif%>
+
+</$let>
+</$let>

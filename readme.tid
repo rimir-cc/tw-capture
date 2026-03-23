@@ -1,0 +1,26 @@
+created: 20260323120000000
+modified: 20260323120000000
+title: $:/plugins/rimir/capture/readme
+type: text/vnd.tiddlywiki
+
+! Capture
+
+A generic inbox plugin for quick idea capture using streams. Throw in thoughts, ideas, and fleeting notes — then triage them into structured typed entities when ready.
+
+!! Features
+
+* **Inbox stream** — rapid keyboard-driven capture via the streams plugin
+* **Triage view** — review captures, promote to typed entities (task, meeting, etc.)
+* **Configurable** — set which stream tiddler serves as inbox
+* **Generic** — works with any typed model, not tied to a specific domain
+
+!! Prerequisites
+
+* [[Streams plugin|$:/plugins/sq/streams]] for stream-based note entry
+* [[Typed plugin|$:/plugins/rimir/typed]] for promoting captures to structured entities
+
+!! Quick start
+
+# Open the inbox view and start typing — entries are saved as stream nodes
+# When ready to triage, switch to the triage view
+# Click "Promote" on a capture to open the typed spawner with text pre-filled
