@@ -4,15 +4,19 @@ tags: $:/tags/rimir/appify/view
 title: $:/plugins/rimir/capture/inbox-view
 type: text/vnd.tiddlywiki
 
-\procedure cap-inbox-stream() $:/config/rimir/capture/inbox-stream
-
 <$let inboxTitle={{{ [{$:/config/rimir/capture/inbox-stream}] ~[[Inbox]] }}}>
 
 <%if [<inboxTitle>is[tiddler]] %>
-<$transclude $tiddler=<<inboxTitle>> $mode="block"/>
+<$tiddler tiddler=<<inboxTitle>>>
+<$transclude $tiddler="$:/plugins/sq/streams/nodes-list-template" $mode="block"/>
+</$tiddler>
 <%else%>
 <div class="rr-callout rr-callout-warning">
-No inbox stream found. Create a stream tiddler titled ''<<inboxTitle>>'' with `stream-type: default` to get started.
+No inbox stream found.
+<$button class="tc-btn-invisible tc-tiddlylink" style="margin-left:8px;">
+<$action-sendmessage $message="tm-new-tiddler" title=<<inboxTitle>> stream-type="default" type="text/vnd.tiddlywiki"/>
+Create ''<<inboxTitle>>'' stream
+</$button>
 </div>
 <%endif%>
 
