@@ -6,5 +6,6 @@ type: text/vnd.tiddlywiki
 ! Changelog
 
 |!Version |!Date |!Changes |
+|v0.1.2 |2026-04-27 |Declare `doc-template` as soft-dependent in plugin.info |
 |v0.1.1 |2026-04-07 |Fix icon: add intrinsic dimensions and maroon color for core-hook settings panel |
 |v0.1.0 |2026-03-23 |Initial release: inbox view, triage view, configurable inbox stream |

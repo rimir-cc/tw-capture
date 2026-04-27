@@ -3,12 +3,15 @@
     "description": "Stream-based inbox for quick capture with triage to typed entities",
     "name": "capture",
     "author": "rimir",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "core-version": ">=5.3.0",
     "plugin-type": "plugin",
     "dependents": [
         "$:/plugins/rimir/typed",
         "$:/plugins/rimir/theme"
+    ],
+    "soft-dependents": [
+        "$:/plugins/rimir/doc-template"
     ],
     "list": "readme documentation settings changelog license"
 }
