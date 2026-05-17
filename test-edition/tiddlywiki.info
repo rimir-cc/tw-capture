@@ -1,0 +1,11 @@
+{
+    "description": "Test edition for capture",
+    "plugins": [
+        "tiddlywiki/jasmine",
+        "rimir/capture"
+    ],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ]
+}
